@@ -1,3 +1,7 @@
+package org.jedynakd.tennisgame.players;
+
+import org.jedynakd.tennisgame.score.ScoreDescription;
+
 import java.util.HashMap;
 import java.util.Map;
 

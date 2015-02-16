@@ -1,3 +1,5 @@
+package org.jedynakd.tennisgame.winner;
+
 public enum Winner {
     PLAYER1("Player1 wins"), PLAYER2("Player2 wins"),NOWINNER("No winner yet");
 

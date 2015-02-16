@@ -1,3 +1,7 @@
+import org.jedynakd.tennisgame.players.Player;
+import org.jedynakd.tennisgame.score.ScoreBoard;
+import org.jedynakd.tennisgame.score.ScoreDescription;
+import org.jedynakd.tennisgame.winner.Winner;
 import org.junit.Before;
 import org.junit.Test;
 

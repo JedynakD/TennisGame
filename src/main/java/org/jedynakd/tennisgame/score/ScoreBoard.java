@@ -1,3 +1,8 @@
+package org.jedynakd.tennisgame.score;
+
+import org.jedynakd.tennisgame.players.Player;
+import org.jedynakd.tennisgame.winner.Winner;
+
 public class ScoreBoard {
     private Player player1;
     private Player player2;
