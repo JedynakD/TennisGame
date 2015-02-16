@@ -1,3 +1,5 @@
+package org.jedynakd.tennisgame;
+
 import org.jedynakd.tennisgame.players.Player;
 import org.jedynakd.tennisgame.score.ScoreBoard;
 import org.jedynakd.tennisgame.score.ScoreDescription;

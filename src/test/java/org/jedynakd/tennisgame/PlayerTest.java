@@ -1,3 +1,5 @@
+package org.jedynakd.tennisgame;
+
 import org.jedynakd.tennisgame.players.Player;
 import org.junit.Test;
 
