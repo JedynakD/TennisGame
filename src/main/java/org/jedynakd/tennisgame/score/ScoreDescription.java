@@ -9,7 +9,7 @@ public enum ScoreDescription {
         this.scoreName = scoreName;
     }
 
-    public String getScoreName() {
+    public String toString() {
         return scoreName;
     }
 }
