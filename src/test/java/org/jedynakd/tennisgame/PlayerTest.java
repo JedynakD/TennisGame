@@ -1,6 +1,7 @@
 package org.jedynakd.tennisgame;
 
 import org.jedynakd.tennisgame.players.Player;
+import org.jedynakd.tennisgame.score.ScoreDescription;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -30,14 +31,14 @@ public class PlayerTest {
         player.scorePoint();
         player.scorePoint();
         player.scorePoint();
-        assertEquals("No description.", player.showScoreName());
+        assertEquals(ScoreDescription.NODESCRIPTION.toString(), player.showScoreName());
     }
 
     @Test
     public void shouldReturnLoveWhenScoreValueIsZero() {
         player = new Player();
 
-        assertEquals("love", player.showScoreName());
+        assertEquals(ScoreDescription.LOVE.toString(), player.showScoreName());
     }
 
     @Test
@@ -45,7 +46,7 @@ public class PlayerTest {
         player = new Player();
         player.scorePoint();
 
-        assertEquals("fifteen", player.showScoreName());
+        assertEquals(ScoreDescription.FIFTEEN.toString(), player.showScoreName());
     }
 
     @Test
@@ -54,7 +55,7 @@ public class PlayerTest {
         player.scorePoint();
         player.scorePoint();
 
-        assertEquals("thirty", player.showScoreName());
+        assertEquals(ScoreDescription.THIRTY.toString(), player.showScoreName());
     }
 
     @Test
@@ -64,6 +65,6 @@ public class PlayerTest {
         player.scorePoint();
         player.scorePoint();
 
-        assertEquals("forty", player.showScoreName());
+        assertEquals(ScoreDescription.FORTY.toString(), player.showScoreName());
     }
 }

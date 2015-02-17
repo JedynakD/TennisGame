@@ -37,16 +37,16 @@ public class ScoreBoardTest {
         when(mockedPlayer2.showPoints()).thenReturn(4);
         board = new ScoreBoard(mockedPlayer1, mockedPlayer2);
 
-        assertEquals(ScoreDescription.DEUCE.getScoreName(), board.showScoreBoard());
+        assertEquals(ScoreDescription.DEUCE.toString(), board.showScoreBoard());
     }
 
     @Test
-     public void shouldReturnAdvantageWhenOneOfThePlayersHasOneMorePointThenOtherPlayerAndTheirScoreIsMoreThanThree() {
+    public void shouldReturnAdvantageWhenOneOfThePlayersHasOneMorePointThenOtherPlayerAndTheirScoreIsMoreThanThree() {
         when(mockedPlayer1.showPoints()).thenReturn(4);
         when(mockedPlayer2.showPoints()).thenReturn(5);
         board = new ScoreBoard(mockedPlayer1, mockedPlayer2);
 
-        assertEquals(ScoreDescription.ADVANTAGE.getScoreName(), board.showScoreBoard());
+        assertEquals(ScoreDescription.ADVANTAGE.toString(), board.showScoreBoard());
     }
 
     @Test
@@ -55,6 +55,6 @@ public class ScoreBoardTest {
         when(mockedPlayer2.showPoints()).thenReturn(1);
         board = new ScoreBoard(mockedPlayer1, mockedPlayer2);
 
-        assertEquals("No winner yet", board.showScoreBoard());
+        assertEquals(Winner.NOWINNER.toString(), board.showScoreBoard());
     }
 }
