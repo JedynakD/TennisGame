@@ -16,19 +16,19 @@ public class Player {
         scoreRecord.put(3, ScoreDescription.FORTY);
     }
 
-    public int showPoints() {
+    public int getPoints() {
         return points;
     }
 
     public void scorePoint() {
-        points = points + 1;
+        points++;
     }
 
-    public String showScoreName() {
+    public String getScoreName() {
         if (points < 4) {
-            return scoreRecord.get(points).getScoreName();
+            return scoreRecord.get(points).toString();
         } else {
-            return ScoreDescription.NODESCRIPTION.getScoreName();
+            return ScoreDescription.NODESCRIPTION.toString();
         }
     }
 }

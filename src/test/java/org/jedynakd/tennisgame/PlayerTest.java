@@ -7,64 +7,54 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PlayerTest {
-    Player player;
+    Player player = new Player();
 
     @Test
     public void shouldReturnZeroWhenPlayerScoredNoPoint() {
-        player = new Player();
-
-        assertEquals(0, player.showPoints());
+        assertEquals(0, player.getPoints());
     }
 
     @Test
     public void shouldReturnOneWhenPlayerScoredOnePoint() {
-        player = new Player();
         player.scorePoint();
-        assertEquals(1, player.showPoints());
+        assertEquals(1, player.getPoints());
     }
 
     @Test
     public void shouldReturnNoDescriptionWhenScoreValueIsBiggerThanThree() {
-        player = new Player();
-        player.scorePoint();
-        player.scorePoint();
-        player.scorePoint();
-        player.scorePoint();
-        player.scorePoint();
-        assertEquals(ScoreDescription.NODESCRIPTION.toString(), player.showScoreName());
+        for (int i = 0; i < 5; i++) {
+            player.scorePoint();
+        }
+
+        assertEquals(ScoreDescription.NODESCRIPTION.toString(), player.getScoreName());
     }
 
     @Test
     public void shouldReturnLoveWhenScoreValueIsZero() {
-        player = new Player();
-
-        assertEquals(ScoreDescription.LOVE.toString(), player.showScoreName());
+        assertEquals(ScoreDescription.LOVE.toString(), player.getScoreName());
     }
 
     @Test
     public void shouldReturnFifteenWhenScoreValueIsOne() {
-        player = new Player();
         player.scorePoint();
 
-        assertEquals(ScoreDescription.FIFTEEN.toString(), player.showScoreName());
+        assertEquals(ScoreDescription.FIFTEEN.toString(), player.getScoreName());
     }
 
     @Test
     public void shouldReturnThirtyWhenScoreValueIsTwo() {
-        player = new Player();
         player.scorePoint();
         player.scorePoint();
 
-        assertEquals(ScoreDescription.THIRTY.toString(), player.showScoreName());
+        assertEquals(ScoreDescription.THIRTY.toString(), player.getScoreName());
     }
 
     @Test
     public void shouldReturnFortyWhenScoreValueIsThree() {
-        player = new Player();
         player.scorePoint();
         player.scorePoint();
         player.scorePoint();
 
-        assertEquals(ScoreDescription.FORTY.toString(), player.showScoreName());
+        assertEquals(ScoreDescription.FORTY.toString(), player.getScoreName());
     }
 }
