@@ -7,8 +7,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PlayerTest {
-    Player player = new Player();
-
+    private Player player;
+    
+    @Before
+    public void setUp(){
+        player = new Player();
+    }
+    
     @Test
     public void shouldReturnZeroWhenPlayerScoredNoPoint() {
         assertEquals(0, player.getPoints());
